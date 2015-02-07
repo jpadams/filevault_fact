@@ -4,6 +4,14 @@ CORESTORAGESTATUS="/private/tmp/corestorage.txt"
 ENCRYPTSTATUS="/private/tmp/encrypt_status.txt"
 ENCRYPTDIRECTION="/private/tmp/encrypt_direction.txt"
 
+# Checks to see if we're even on Mac OS X by checking for
+# /usr/bin/sw_vers, otherwise the fact is
+# irrelevant and we'll simply exit.
+
+if [[ ! -f /usr/bin/sw_vers ]]; then
+  exit
+fi
+
 osvers_major=$(sw_vers -productVersion | awk -F. '{print $1}')
 osvers_minor=$(sw_vers -productVersion | awk -F. '{print $2}')
 
