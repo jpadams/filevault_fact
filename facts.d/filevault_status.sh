@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# I took rtrouton's script and turned it into an Puppet fact.
+# https://github.com/rtrouton/rtrouton_scripts
+# Under MIT license in https://github.com/jpadams/filevault_fact -> LICENSE 
+
 CORESTORAGESTATUS="/private/tmp/corestorage.txt"
 ENCRYPTSTATUS="/private/tmp/encrypt_status.txt"
 ENCRYPTDIRECTION="/private/tmp/encrypt_direction.txt"
