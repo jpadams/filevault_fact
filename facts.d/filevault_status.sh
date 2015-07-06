@@ -13,6 +13,7 @@ ENCRYPTDIRECTION="/private/tmp/encrypt_direction.txt"
 # irrelevant and we'll simply exit.
 
 if [[ ! -f /usr/bin/sw_vers ]]; then
+  echo "filevault_status="
   exit
 fi
 
